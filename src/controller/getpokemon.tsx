@@ -5,6 +5,7 @@ export async function getPokemons(): Promise<Pokemon[]>{
      */
     const response =await fetch("https://unpkg.com/pokemons@1.1.0/pokemons.json");
 
+    
     const datos = await response.json();
     const pokemons = datos.results.map((pokemon:any)=>({
         name: pokemon.name, 
